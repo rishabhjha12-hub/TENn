@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navbar from './navbar'
+import './index.css'
+import Contact from './contact'
+import Header from './Header'
+import Howitworks from './Howitworks'
+import Aboutus from './Aboutus'
+import Testimonial from './Testimonial'
+import Nextbig from './nextbig'
+import Home from './Home'
+import { Route, Switch } from 'react-router'
+import We from './Pages/We'
+import Online from './Pages/online'
+import Error from './Pages/Error'
+import About from './About'
+import Contactt from './Contactt'
+import Complaints from './Complaints'
+import Loginpage from './Loginpage'
+import Testi from './Testi'
+import Text from './Text'
 
-function App() {
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/About" component={About}></Route>
+        <Route path="/We are hiring" component={We}></Route>
+        <Route path="/online courses" component={Online}></Route>
+        <Route path="/Contactt" component={Contactt}></Route>
+        <Route path="/Error" component={Error}></Route>
+        <Route path="/Testi" component={Testi}></Route>
+        <Route path="/Complaints" component={Complaints}></Route>
+        <Route path="/Loginpage" component={Loginpage}></Route>
+        <Route path="/Text" component={Text}></Route>
+        
+
+      </Switch>
+    </>
+  )
 }
 
-export default App;
+
+
+
+
+export default App
